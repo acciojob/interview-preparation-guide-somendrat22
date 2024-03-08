@@ -14,23 +14,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/topics")
 public class InterviewTopicController {
-	private List<InterviewTopic> topics = new ArrayList<>();
+    private List<InterviewTopic> topics = new ArrayList<>();
     private long nextId = 1;
 
     @PostMapping
     public InterviewTopic addTopic(@RequestBody InterviewTopic topic) {
-    	// your code goes here
+        topic.setId(nextId++);
+        topics.add(topic);
         return topic;
     }
 
     @GetMapping
     public List<InterviewTopic> getAllTopics() {
-    	// your code goes here
         return topics;
     }
 
     @DeleteMapping("/{id}")
     public void deleteTopic(@PathVariable Long id) {
-    	// your code goes here
+        topics.removeIf(topic -> topic.getId().equals(id));
     }
 }

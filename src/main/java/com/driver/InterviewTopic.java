@@ -1,39 +1,39 @@
 package com.driver;
 
 public class InterviewTopic {
-	 private Long id;
-	    private String name;
+	private Long id;
+	private String name;
 
-	    public InterviewTopic() {
-	        // Default constructor
-	    }
+	public InterviewTopic() {
+		// Default constructor
+	}
 
-	    public InterviewTopic(Long id, String name) {
-	        // your code goes here
-	    }
+	public InterviewTopic(Long id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 
-	    public Long getId() {
-	    	// your code goes here
-	        return id;
-	    }
+	public Long getId() {
+		return id;
+	}
 
-	    public void setId(Long id) {
-	    	// your code goes here
-	        this.id = id;
-	    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-	    public String getName() {
-	    	// your code goes here
-	        return name;
-	    }
+	public String getName() {
+		return name;
+	}
 
-	    public void setName(String name) {
-	    	// your code goes here
-	    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-	    @Override
-	    public String toString() {
-	    	// your code goes here
-	        return null;
-	    }
+	@Override
+	public String toString() {
+		return "InterviewTopic{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				'}';
+	}
 }
